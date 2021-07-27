@@ -11,7 +11,7 @@ import SwiftUI
 struct PicsumPhotosApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PicsumPhotoView()
         }
     }
 }

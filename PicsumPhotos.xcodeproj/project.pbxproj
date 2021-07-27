@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5824856026AF85B200F46F67 /* PicsumDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824855F26AF85B200F46F67 /* PicsumDownloadService.swift */; };
 		5867B87326AF4E270049B55B /* PicsumPhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B87226AF4E270049B55B /* PicsumPhotosApp.swift */; };
-		5867B87526AF4E270049B55B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B87426AF4E270049B55B /* ContentView.swift */; };
+		5867B87526AF4E270049B55B /* PicsumPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B87426AF4E270049B55B /* PicsumPhotoView.swift */; };
 		5867B87726AF4E290049B55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5867B87626AF4E290049B55B /* Assets.xcassets */; };
 		5867B87A26AF4E290049B55B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5867B87926AF4E290049B55B /* Preview Assets.xcassets */; };
 		5867B88526AF4E290049B55B /* PicsumPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B88426AF4E290049B55B /* PicsumPhotosTests.swift */; };
 		5867B89026AF4E290049B55B /* PicsumPhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B88F26AF4E290049B55B /* PicsumPhotosUITests.swift */; };
+		5867B8A026AF675A0049B55B /* PicsumElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B89F26AF675A0049B55B /* PicsumElement.swift */; };
+		5867B8A326AF6ABC0049B55B /* PicsumPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B8A226AF6ABC0049B55B /* PicsumPhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5824855F26AF85B200F46F67 /* PicsumDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumDownloadService.swift; sourceTree = "<group>"; };
 		5867B86F26AF4E270049B55B /* PicsumPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsumPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5867B87226AF4E270049B55B /* PicsumPhotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotosApp.swift; sourceTree = "<group>"; };
-		5867B87426AF4E270049B55B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5867B87426AF4E270049B55B /* PicsumPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoView.swift; sourceTree = "<group>"; };
 		5867B87626AF4E290049B55B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5867B87926AF4E290049B55B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5867B87B26AF4E290049B55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		5867B88B26AF4E290049B55B /* PicsumPhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicsumPhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5867B88F26AF4E290049B55B /* PicsumPhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotosUITests.swift; sourceTree = "<group>"; };
 		5867B89126AF4E290049B55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5867B89F26AF675A0049B55B /* PicsumElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumElement.swift; sourceTree = "<group>"; };
+		5867B8A226AF6ABC0049B55B /* PicsumPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,10 @@
 		5867B87126AF4E270049B55B /* PicsumPhotos */ = {
 			isa = PBXGroup;
 			children = (
-				5867B87226AF4E270049B55B /* PicsumPhotosApp.swift */,
-				5867B87426AF4E270049B55B /* ContentView.swift */,
+				5867B89E26AF5AC70049B55B /* Model */,
+				5867B8A426AF6CA60049B55B /* Service */,
+				5867B8A126AF6A330049B55B /* ViewModels */,
+				5867B89D26AF51D80049B55B /* View */,
 				5867B87626AF4E290049B55B /* Assets.xcassets */,
 				5867B87B26AF4E290049B55B /* Info.plist */,
 				5867B87826AF4E290049B55B /* Preview Content */,
@@ -128,6 +136,39 @@
 				5867B89126AF4E290049B55B /* Info.plist */,
 			);
 			path = PicsumPhotosUITests;
+			sourceTree = "<group>";
+		};
+		5867B89D26AF51D80049B55B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5867B87426AF4E270049B55B /* PicsumPhotoView.swift */,
+				5867B87226AF4E270049B55B /* PicsumPhotosApp.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5867B89E26AF5AC70049B55B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5867B89F26AF675A0049B55B /* PicsumElement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5867B8A126AF6A330049B55B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5867B8A226AF6ABC0049B55B /* PicsumPhotoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5867B8A426AF6CA60049B55B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5824855F26AF85B200F46F67 /* PicsumDownloadService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5867B87526AF4E270049B55B /* ContentView.swift in Sources */,
+				5867B8A326AF6ABC0049B55B /* PicsumPhotoViewModel.swift in Sources */,
+				5824856026AF85B200F46F67 /* PicsumDownloadService.swift in Sources */,
+				5867B87526AF4E270049B55B /* PicsumPhotoView.swift in Sources */,
+				5867B8A026AF675A0049B55B /* PicsumElement.swift in Sources */,
 				5867B87326AF4E270049B55B /* PicsumPhotosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
