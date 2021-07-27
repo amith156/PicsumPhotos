@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5824856026AF85B200F46F67 /* PicsumDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824855F26AF85B200F46F67 /* PicsumDownloadService.swift */; };
+		5824856526AFB48900F46F67 /* SearchNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824856426AFB48900F46F67 /* SearchNavigation.swift */; };
+		5824856926AFC1C800F46F67 /* DownloadPicsumImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824856826AFC1C800F46F67 /* DownloadPicsumImageRow.swift */; };
+		5824856B26AFC33900F46F67 /* DownloadPicsumImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824856A26AFC33900F46F67 /* DownloadPicsumImageView.swift */; };
+		5824856D26AFC4B600F46F67 /* DownloadPicsumImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824856C26AFC4B600F46F67 /* DownloadPicsumImageViewModel.swift */; };
 		5867B87326AF4E270049B55B /* PicsumPhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B87226AF4E270049B55B /* PicsumPhotosApp.swift */; };
 		5867B87526AF4E270049B55B /* PicsumPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5867B87426AF4E270049B55B /* PicsumPhotoView.swift */; };
 		5867B87726AF4E290049B55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5867B87626AF4E290049B55B /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		5824855F26AF85B200F46F67 /* PicsumDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumDownloadService.swift; sourceTree = "<group>"; };
+		5824856426AFB48900F46F67 /* SearchNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigation.swift; sourceTree = "<group>"; };
+		5824856826AFC1C800F46F67 /* DownloadPicsumImageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadPicsumImageRow.swift; sourceTree = "<group>"; };
+		5824856A26AFC33900F46F67 /* DownloadPicsumImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadPicsumImageView.swift; sourceTree = "<group>"; };
+		5824856C26AFC4B600F46F67 /* DownloadPicsumImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadPicsumImageViewModel.swift; sourceTree = "<group>"; };
 		5867B86F26AF4E270049B55B /* PicsumPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsumPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5867B87226AF4E270049B55B /* PicsumPhotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotosApp.swift; sourceTree = "<group>"; };
 		5867B87426AF4E270049B55B /* PicsumPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotoView.swift; sourceTree = "<group>"; };
@@ -78,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5824856126AFB1BA00F46F67 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5824856426AFB48900F46F67 /* SearchNavigation.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		5867B86626AF4E270049B55B = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +157,11 @@
 		5867B89D26AF51D80049B55B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5867B87426AF4E270049B55B /* PicsumPhotoView.swift */,
 				5867B87226AF4E270049B55B /* PicsumPhotosApp.swift */,
+				5867B87426AF4E270049B55B /* PicsumPhotoView.swift */,
+				5824856826AFC1C800F46F67 /* DownloadPicsumImageRow.swift */,
+				5824856A26AFC33900F46F67 /* DownloadPicsumImageView.swift */,
+				5824856126AFB1BA00F46F67 /* Utilities */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				5867B8A226AF6ABC0049B55B /* PicsumPhotoViewModel.swift */,
+				5824856C26AFC4B600F46F67 /* DownloadPicsumImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -300,11 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5824856D26AFC4B600F46F67 /* DownloadPicsumImageViewModel.swift in Sources */,
 				5867B8A326AF6ABC0049B55B /* PicsumPhotoViewModel.swift in Sources */,
 				5824856026AF85B200F46F67 /* PicsumDownloadService.swift in Sources */,
 				5867B87526AF4E270049B55B /* PicsumPhotoView.swift in Sources */,
 				5867B8A026AF675A0049B55B /* PicsumElement.swift in Sources */,
 				5867B87326AF4E270049B55B /* PicsumPhotosApp.swift in Sources */,
+				5824856526AFB48900F46F67 /* SearchNavigation.swift in Sources */,
+				5824856926AFC1C800F46F67 /* DownloadPicsumImageRow.swift in Sources */,
+				5824856B26AFC33900F46F67 /* DownloadPicsumImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,16 +11,30 @@ struct PicsumPhotoView: View {
     
     
     @StateObject var picsumPhotoViewModel = PicsumPhotoViewModel()
+    @State var searchText = ""
     
     var body: some View {
-        NavigationView {
+        
+        SearchNavigation(text: $searchText) {
+            
+        } cancel: {
+            
+        } content: {
+            
             List {
-                ForEach(picsumPhotoViewModel.dataObj, id: \.id) { model in
+                
+                ForEach(picsumPhotoViewModel.dataObj.filter {
+                    self.searchText.isEmpty ? true : $0.author.lowercased().prefix(searchText.count).contains(searchText.lowercased())
+                }, id: \.id) { model in
                     
-                    Text(model.author)
-                                .padding()
+
+                    DownloadPicsumImageRow(model: model)
+                    
+                    
                 }
+                
             }
+            .navigationTitle("Picsum Images")
         }
         
     }
