@@ -11,6 +11,7 @@ struct DownloadPicsumImageView: View {
     
     @StateObject var DPIvm : DownloadPicsumImageViewModel
     
+    
     init(url: String, key: String) {
         _DPIvm = StateObject(wrappedValue: DownloadPicsumImageViewModel(url: url, key: key))
     }
@@ -30,6 +31,7 @@ struct DownloadPicsumImageView: View {
                     .shadow(radius: 40)
             }
         }
+
     }
 }
 

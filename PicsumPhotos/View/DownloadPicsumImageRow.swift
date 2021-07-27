@@ -10,7 +10,7 @@ import SwiftUI
 struct DownloadPicsumImageRow: View {
     
     let model: PicsumElement
-    
+    @State var itemTap = false
     
     var body: some View {
         VStack(alignment: .center) {
@@ -29,6 +29,14 @@ struct DownloadPicsumImageRow: View {
                 .padding(.bottom)
                 
         }
+        .onTapGesture {
+            itemTap.toggle()
+        }
+        .sheet(isPresented: $itemTap, content: {
+            BottomCardView(model: model)
+        })
+
+        
     }
 }
 
