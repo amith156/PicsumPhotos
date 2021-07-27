@@ -15,15 +15,17 @@ struct DownloadPicsumImageRow: View {
     var body: some View {
         VStack(alignment: .center) {
             HStack(alignment: .center) {
-                DownloadPicsumImageView(url: model.downloadURL)
+                DownloadPicsumImageView(url: model.downloadURL, key: model.id)
                     .frame(maxWidth: UIScreen.main.bounds.size.width / 1.1)
                     .frame(height: UIScreen.main.bounds.size.height/4)
                     .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+                    .shadow(radius: 12)
             }.padding()
                 
             
             Text(model.author)
-                .foregroundColor(.blue)
+                .font(.title)
+                .foregroundColor(.primary)
                 .padding(.bottom)
                 
         }

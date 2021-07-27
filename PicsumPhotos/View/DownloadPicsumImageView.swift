@@ -11,8 +11,8 @@ struct DownloadPicsumImageView: View {
     
     @StateObject var DPIvm : DownloadPicsumImageViewModel
     
-    init(url: String) {
-        _DPIvm = StateObject(wrappedValue: DownloadPicsumImageViewModel(url: url))
+    init(url: String, key: String) {
+        _DPIvm = StateObject(wrappedValue: DownloadPicsumImageViewModel(url: url, key: key))
     }
     
     
@@ -35,7 +35,7 @@ struct DownloadPicsumImageView: View {
 
 struct DownloadPicsumImageView_Previews: PreviewProvider {
     static var previews: some View {
-        DownloadPicsumImageView(url: "https://unsplash.com/photos/yC-Yzbqy7PY")
+        DownloadPicsumImageView(url: "https://unsplash.com/photos/yC-Yzbqy7PY", key: "0")
             .frame(maxWidth: .infinity)
             .frame(height: UIScreen.main.bounds.size.height/4)
             .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))

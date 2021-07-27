@@ -16,18 +16,30 @@ class DownloadPicsumImageViewModel: ObservableObject {
     
     let imageUrlString : String
     var canellables = Set<AnyCancellable>()
+    let manager = PicsumPhotoCacheManager.instace
+    let imageKey: String
     
-    
-    init(url : String) {
+    init(url : String, key: String) {
         self.imageUrlString = url
+        self.imageKey = key
         downloadImage()
+        getImage()
+    }
+    
+    func getImage() {
+        if let savedImage = manager.get(key: imageKey) {
+            image = savedImage
+            print("Getting image from cache memory!!!!")
+        }
+        else {
+            downloadImage()
+            print("Downloading image!!!!!")
+        }
     }
     
     
-    
-    
     func downloadImage() {
-        print("Downloading image!!!!!")
+        
         guard let url = URL(string: imageUrlString) else {
             isLoading = false
             return
@@ -52,7 +64,11 @@ class DownloadPicsumImageViewModel: ObservableObject {
                 
                 
             } receiveValue: { [weak self] (returnedImage) in
-                self?.image = returnedImage
+                guard let self = self,
+                      let image = returnedImage else { return }
+                
+                self.image = image
+                self.manager.add(key: self.imageKey, value: image)
             }
             .store(in: &canellables)
 
