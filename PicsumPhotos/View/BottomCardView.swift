@@ -22,17 +22,113 @@ struct BottomCardView: View {
         
         VStack {
             
-            Text(model.author)
-            
             if let image = bottomCardViewModel.image {
                 Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    .padding()
                 
             }
+            
+            
+            HStack {
+                Text("Auther : ")
+                    .font(.system(size: 30))
+
+                Text(model.author)
+                    .font(.system(size: 30))
+                    .bold()
+                Spacer()
+            }
+            .padding(.leading)
+            .padding(.trailing)
+            
+            
+            
+            
+            HStack {
+                Text("Width : ")
+                    .font(.system(size: 30))
+                
+                Text("\(model.width)")
+                    .font(.system(size: 30))
+                    .bold()
+                Spacer()
+            }
+            .padding(.leading)
+            .padding(.trailing)
+            .padding(.top)
+            
+            
+            HStack {
+                Text("Height : ")
+                    .font(.system(size: 30))
+                
+                Text("\(model.height)")
+                    .font(.system(size: 30))
+                    .bold()
+                Spacer()
+            }
+            .padding(.leading)
+            .padding(.trailing)
+            .padding(.top)
+            
+            
+            VStack {
+                HStack {
+                    Text("Download URL : ")
+                        .font(.system(size: 30))
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("\(model.downloadURL)")
+                        .font(.system(size: 30))
+                        .bold()
+                    Spacer()
+                }
+            }
+            .padding(.leading)
+            .padding(.trailing)
+            .padding(.top)
+            
+            
+            
+            VStack {
+                HStack {
+                    Text("URL : ")
+                        .font(.system(size: 30))
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("\(model.url)")
+                        .font(.system(size: 30))
+                        .bold()
+                    Spacer()
+                }
+                Spacer()
+            }
+            .padding(.leading)
+            .padding(.trailing)
+            .padding(.top)
+            
+            
+            
+            
+            
+            Spacer()
+            
+            
+            
+            
+            
             
         }
         
         
-    
+        
     }
 }
 
